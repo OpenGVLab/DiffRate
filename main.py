@@ -178,7 +178,7 @@ def get_args_parser():
 
     parser.add_argument('--target_flops', type=float, default=3.0)
     parser.add_argument('--granularity', type=int, default=4, help='the token number gap between each compression rate candidate')
-    parser.add_argument('--eval_with_compression_rate', action='store_true', help='eval by exiting compression rate in compression_rate.json')
+    parser.add_argument('--load_compression_rate', action='store_true', help='eval by exiting compression rate in compression_rate.json')
     parser.add_argument('--warmup_compression_rate', action='store_true', default=False, help='inactive computational constraint in first epoch')
     return parser
 
@@ -285,7 +285,7 @@ def main(args):
         'vit_huge_patch14_mae': 'ViT-H-MAE',
         'caformer_s36':'CAFormer-S36',
     }
-    if args.eval_with_compression_rate:
+    if args.load_compression_rate:
         with open('compression_rate.json', 'r') as f:
             compression_rate = json.load(f) 
             model_name = model_name_dict[args.model]

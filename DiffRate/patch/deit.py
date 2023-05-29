@@ -104,7 +104,7 @@ class DiffRateBlock(Block):
             if merge_kept_num < prune_kept_num:
                 merge,node_max = get_merge_func(x.detach(), kept_number=merge_kept_num)
                 x = merge(x,mode='mean')
-                # optimize proportional attention in ToMe by considering similarity
+                # optimize proportional attention in ToMe by considering similarity, this is benefit to the accuracy of off-the-shelf model.
                 self._diffrate_info["size"] = torch.cat((self._diffrate_info["size"][:, :merge_kept_num],self._diffrate_info["size"][:, merge_kept_num:]*node_max[..., None] ),dim=1)
                 self._diffrate_info["size"] = merge(self._diffrate_info["size"], mode='sum')
                 if self._diffrate_info["trace_source"]:
