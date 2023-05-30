@@ -1,5 +1,5 @@
 # DiffRate
-This a official Pytorch implementation of our paper "DiffRate : Differentiable Compression Rate for Efficient Vision Transformers"
+This a official Pytorch implementation of our paper "[DiffRate : Differentiable Compression Rate for Efficient Vision Transformers](https://arxiv.org/abs/2305.17997)"
 
 
 ## What DiffRate Does
@@ -158,6 +158,17 @@ python -m torch.distributed.launch \
 
 ## Visualization
 See [visualization.ipynb](https://github.com/anonymous998899/DiffRate/blob/main/visualization.ipynb) for more details.
+
+## Citation
+If you use DiffRate or this repository in your work, please cite:
+```
+@article{DiffRate,
+  title={SMMix: Self-Motivated Image Mixing for Vision Transformers},
+  author={Mengzhao Chen, Wenqi Shao, Peng Xu, Mingbao Lin, Kaipeng Zhang, Fei Chao, Rongrong Ji, Yu Qiao, Ping Luo},
+  journal={arXiv preprint arXiv:2305.17997},
+  year={2023}
+}
+```
 
 ## Acknowledge
 This codebase borrow some code from [DeiT](https://github.com/facebookresearch/deit) and [ToMe](https://github.com/facebookresearch/ToMe). Thanks for their wonderful work.
