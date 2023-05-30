@@ -140,7 +140,7 @@ python -m torch.distributed.launch \
 --model $model_name$ \
 --target_flops $target_flops$
 ```
-- supported `$model_name$`: `{vit_deit_tiny_patch16_224,vit_deit_small_patch16_224,vit_deit_base_patch16_224,vit_base_patch16_mae,vit_large_patch16_mae,vit_huge_patch14_mae,caformer-s36}`
+- supported `$model_name$`: `{vit_deit_tiny_patch16_224,vit_deit_small_patch16_224,vit_deit_base_patch16_224,vit_base_patch16_mae,vit_large_patch16_mae,vit_huge_patch14_mae,caformer_s36}`
 - supported `$target_flops$`: a floating point number
 
 For example, search a `2.9G` compression rate schedule for `ViT-S (DeiT)`:
@@ -163,7 +163,7 @@ See [visualization.ipynb](https://github.com/anonymous998899/DiffRate/blob/main/
 If you use DiffRate or this repository in your work, please cite:
 ```
 @article{DiffRate,
-  title={SMMix: Self-Motivated Image Mixing for Vision Transformers},
+  title={DiffRate : Differentiable Compression Rate for Efficient Vision Transformers},
   author={Mengzhao Chen, Wenqi Shao, Peng Xu, Mingbao Lin, Kaipeng Zhang, Fei Chao, Rongrong Ji, Yu Qiao, Ping Luo},
   journal={arXiv preprint arXiv:2305.17997},
   year={2023}
