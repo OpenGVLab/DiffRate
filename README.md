@@ -1,4 +1,4 @@
-# DiffRate
+# DiffRate (ICCV 2023)
 This a official Pytorch implementation of our paper "[DiffRate : Differentiable Compression Rate for Efficient Vision Transformers](https://arxiv.org/abs/2305.17997)"
 
 
